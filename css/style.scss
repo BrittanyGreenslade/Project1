@@ -1,34 +1,23 @@
 @import "_header.scss";
-@mixin gridRows($row1, $row1) {
-  display: grid;
-  grid-template-rows: ($row1) ($row2);
-}
-@mixin gridColumns($column1, $column2) {
-  grid-template-columns: ($column1) ($column2);
-}
-$fontColor: white;
-$featureColor: #a62927;
+
 * {
   padding: 0;
   margin: 0;
 }
-body {
-  background-image: url(../images/pizzaSlicesBlackBackground2.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vw;
-  object-fit: cover;
+.blackBackground {
+  display: grid;
 }
 // body {
 //   background-image: url(/images/blackBackground.jpg);
 //   background-repeat: no-repeat;
 //   background-size: 100vw 100vh;
-
 //   object-fit: cover;
 //   max-width: 100%;
 // }
 main {
   min-height: 60%;
 }
+
 #slogan {
   color: $fontColor;
   font-size: 25px;
@@ -61,8 +50,8 @@ main {
   border-radius: 50%;
   display: block;
   height: 100px;
-  margin: 5px auto 40px auto;
-
+  margin-top: 5px;
+  margin-bottom: 40px;
   object-fit: cover;
   width: 100px;
 }
@@ -85,17 +74,16 @@ main {
   letter-spacing: 1px;
   margin-bottom: 50px;
 }
-#map {
-  width: 100%;
-  max-width: 500px;
+.pizzaPic5 {
+  display: grid;
+  place-items: center;
 }
+// @media only screen and (min-width: 1000px) {
+//   body {
+//     background-image: url(../images/pizzaSlicesBlackBackground2.jpg);
+//     background-repeat: no-repeat;
+//     background-size: 100vw;
+//     object-fit: cover;
+//   }
+// }
 @import "_footer.scss";
-
-@media only screen and (min-width: 1000px) {
-  body {
-    background-image: url(../images/pizzaSlicesBlackBackground2.jpg);
-    background-repeat: no-repeat;
-    background-size: 100vw;
-    object-fit: cover;
-  }
-}

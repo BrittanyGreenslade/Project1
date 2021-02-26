@@ -1,8 +1,14 @@
-// @mixin centerGrid($jus, $ali) {
-//   display: grid;
-//   justify-items: ($jus);
-//   align-items: ($ali);
-// }
+@mixin gridRows($row1, $row2) {
+  display: grid;
+  grid-template-rows: ($row1) ($row2);
+}
+@mixin gridColumns($column1, $column2) {
+  display: grid;
+  grid-template-columns: ($column1) ($column2);
+}
+$fontColor: white;
+$featureColor: #a62927;
+
 header {
   min-height: 10%;
   width: 100%;

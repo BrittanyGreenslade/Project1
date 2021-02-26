@@ -21,13 +21,12 @@ header {
 #shopNameAndHamburgerMenu {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 0.7fr 0.25fr;
+      grid-template-columns: 0.7fr 0.25fr;
   justify-items: start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-auto-flow: column;
-  -ms-grid-columns: 0.70fr 0.25fr;
-      grid-template-columns: 0.70fr 0.25fr;
   margin-top: 10px;
   width: 100%;
 }
@@ -64,15 +63,13 @@ header {
   margin: 0;
 }
 
-body {
-  background-image: url(/images/blackBackground.jpg);
-  background-repeat: no-repeat;
-  background-size: 100vw 200vh;
+.blackBackground {
+  display: -ms-grid;
+  display: grid;
 }
 
 main {
   min-height: 60%;
-  max-width: 100%;
 }
 
 #slogan {
@@ -120,7 +117,8 @@ main {
   border-radius: 50%;
   display: block;
   height: 100px;
-  margin: 5px auto 40px auto;
+  margin-top: 5px;
+  margin-bottom: 40px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100px;
@@ -146,6 +144,12 @@ main {
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 50px;
+}
+
+.pizzaPic5 {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 footer {
