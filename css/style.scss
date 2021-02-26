@@ -1,0 +1,101 @@
+@import "_header.scss";
+@mixin gridRows($row1, $row1) {
+  display: grid;
+  grid-template-rows: ($row1) ($row2);
+}
+@mixin gridColumns($column1, $column2) {
+  grid-template-columns: ($column1) ($column2);
+}
+$fontColor: white;
+$featureColor: #a62927;
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: url(../images/pizzaSlicesBlackBackground2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  object-fit: cover;
+}
+// body {
+//   background-image: url(/images/blackBackground.jpg);
+//   background-repeat: no-repeat;
+//   background-size: 100vw 100vh;
+
+//   object-fit: cover;
+//   max-width: 100%;
+// }
+main {
+  min-height: 60%;
+}
+#slogan {
+  color: $fontColor;
+  font-size: 25px;
+  padding-left: 10px;
+  text-align: center;
+  margin-top: 8px;
+}
+#sloganAndButtons {
+  @include gridRows(1fr, 2fr);
+  align-items: center;
+  justify-items: center;
+}
+#buttons {
+  @include gridRows(1fr, 1fr);
+  margin-bottom: 20px;
+  .button {
+    background: $featureColor;
+    border-radius: 45px;
+    box-shadow: 2px 2px #323536;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 15px;
+    padding-top: 10px;
+    text-align: center;
+    width: 200px;
+  }
+}
+#logo {
+  border-radius: 50%;
+  display: block;
+  height: 100px;
+  margin: 5px auto 40px auto;
+
+  object-fit: cover;
+  width: 100px;
+}
+#hoursAndLocation {
+  margin-top: 10%;
+}
+.hours {
+  font-family: monospace;
+  color: $fontColor;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#locationInfo {
+  padding-top: 20px;
+  font-family: monospace;
+  color: $fontColor;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+#map {
+  width: 100%;
+  max-width: 500px;
+}
+@import "_footer.scss";
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background-image: url(../images/pizzaSlicesBlackBackground2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    object-fit: cover;
+  }
+}
